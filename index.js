@@ -2,7 +2,7 @@ const express = require("express")
 const connection = require('./config/db')
 const newsRouter = require('./routes/news')
 const cors = require('cors');
-const PORT = 8080
+const PORT = process.env.PORT || 5000
 const app = express()
 app.use(express.json())
 app.use(cors());
